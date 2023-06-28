@@ -48,7 +48,7 @@ class Plugin {
                 switch (type) {
                     case 'bpmn:Process':
                     case 'bpmn:Collaboration':
-                      markdown += `# [${name}]\n`;
+                      markdown += `# ${name}`;
                       break;
                     case 'bpmn:Task':
                     case 'bpmn:SubProcess':
@@ -65,17 +65,19 @@ class Plugin {
                     case 'bpmn:DataObjectReference':
                     case 'bpmn:DataStoreReference':
                     case 'bpmn:CallActivity':
-                    case 'bpmn:TextAnnotation':
                     case 'bpmn:Group':
-                      markdown += `### [${name}]\n`;
+                      markdown += `## ${name}`;
+                      break;
+                    case 'bpmn:TextAnnotation':
+                      markdown += `### ${name}`;
                       break;
                     default:
-                      markdown += `## [${name}]\n`;
+                      markdown += `#### ${name}`;
                       break;
                   }
 
                
-                markdown += `* (${id})\n`;
+                markdown += `{#${id}}\n\n`;
 
                 const documentationArray = child.businessObject.documentation || [];
                 if (documentationArray.length > 0) {
@@ -85,10 +87,10 @@ class Plugin {
                 markdown += walk(child.children);
 
             });
-            return markdown+'\n';
+            return markdown+'\n\n';
         }
         const markdown = walk(childrens);
-        console.log("THE MARKDOWN",markdown);
+        console.log("THE MARKDOWN\n",markdown);
         
     }
 
