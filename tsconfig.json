@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "lib": ["es2019"],
+    "module": "CommonJS",
+    "rootDir": "src",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true
+  },
+  "files":[
+    "src/index.ts",
+    "src/menu.ts",
+    "modules.d.ts"
+  ]
+}

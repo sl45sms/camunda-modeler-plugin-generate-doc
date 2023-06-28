@@ -1,0 +1,27 @@
+{
+  "name": "camunda-modeler-plugin-generate-doc",
+  "version": "1.0.0",
+  "description": "extract documentation from the workflow as markdown",
+  "main": "index.js",
+  "repository": "https://github.com/sl45sms/camunda-modeler-plugin-generate-doc",
+  "author": "Panagiotis Skarvelis",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc && ts-add-module-exports && browserify -p esmify build/index.js > build/bundle.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babylon": "^6.18.0",
+    "browserify": "^17.0.0",
+    "electron": "^25.2.0",
+    "esmify": "^2.1.1",
+    "ts-add-module-exports": "^1.0.0",
+    "ts-node": "^10.9.1",
+    "tsify": "^5.0.4",
+    "typescript": "^5.1.5"
+  },
+  "dependencies": {
+    "camunda-modeler-plugin-helpers": "^5.1.0"
+  }
+}
