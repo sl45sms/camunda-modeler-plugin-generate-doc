@@ -1,5 +1,5 @@
 class Plugin {
-    //@ts-ignore
+    //@ts-ignore TODO types
   constructor(elementRegistry, editorActions, canvas, modeling) {
     const generateMarkdown = this.generateMarkdown;
     editorActions.register({
@@ -15,7 +15,7 @@ class Plugin {
   }
 
 }
-//@ts-ignore
+//@ts-ignore TODO types
 Plugin.$inject = [ 'elementRegistry', 'editorActions', 'canvas', 'modeling' ];
 
 
